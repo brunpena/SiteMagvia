@@ -21,8 +21,12 @@ export function SobreNos() {
           <CardInfo title="Valores" description="Ética, inovação, compromisso com a ciência e respeito aos pacientes." color="teal" />
         </div>
 
-        {/* Contato */}
-
+        {/* <h1 className="text-4xl font-bold mb-6 text-gray-900">Somos uma empresa Incubada</h1>
+        <img
+        src="/Educere.png"
+        alt="Logo da Educere"
+        className="w-64 md:w-80 lg:w-96"
+        /> */}
 
       </div>
     </Pagina>
