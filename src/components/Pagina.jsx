@@ -5,7 +5,6 @@ export function Pagina(props) {
         className={`
           flex flex-1 flex-col
           pt-20  /* espaço para o menu fixo */
-          p-6
           bg-white
           text-base text-gray-900 font-sans
         `}
