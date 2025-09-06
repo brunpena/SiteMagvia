@@ -4,16 +4,19 @@ import { MdMedicalServices } from "react-icons/md";
 
 export function Menu() {
   return (
-    <nav className="w-full bg-white shadow-md p-4 fixed top-0 left-0 z-50">
-      <div className="flex justify-center md:justify-evenly items-center gap-4 md:gap-6 text-gray-900 text-lg font-sans font-semibold">
+    <div className="w-full bg-white shadow-md p-4 fixed top-0 left-0 z-50 flex justify-between items-center">
+      <img src="/magviaLogo.png" alt="Mag Logo" className="w-15"/>
+      <nav className="">
+        <div className="flex flex-row m-1 space-x-3">
 
-        <MenuItem to="/" icon={<FaHome />} label="Início" />
-        <MenuItem to="/informacoes" icon={<MdMedicalServices />} label="Informações" />
-        <MenuItem to="/sobrenos" icon={<FaInfoCircle />} label="Sobre Nós" />
-        <MenuItem to="/contato" icon={<FaPhoneAlt />} label="Contato" />
+          <MenuItem to="/" icon={<FaHome />} label="Início" />
+          <MenuItem to="/informacoes" icon={<MdMedicalServices />} label="Informações" />
+          <MenuItem to="/sobrenos" icon={<FaInfoCircle />} label="Sobre Nós" />
+          <MenuItem to="/contato" icon={<FaPhoneAlt />} label="Contato" />
 
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </div>
   );
 }
 
