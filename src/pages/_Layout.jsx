@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Menu } from "../components/Menu";
+import Footer from "../components/Footer";
 
 export function Layout() {
   return (
@@ -10,8 +11,9 @@ export function Layout() {
     `}
     >
         <Menu/>
-      <main className="flex flex-1">
+      <main className="flex flex-col flex-1">
         <Outlet />
+        <Footer />
       </main>
     </div>
   );

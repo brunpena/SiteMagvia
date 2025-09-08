@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Smile, Zap, Shield, Brain } from "lucide-react";
 
-export default function Beneficios({
+export function Beneficios({
     title = "Benefícios Comprovados",
     subtitle = "Resultados científicos que transformam a vida dos pacientes",
     items = null,
@@ -14,7 +14,7 @@ export default function Beneficios({
         {
             id: "depressao",
             icon: <Smile size={36} strokeWidth={1.8} className="text-blue-500" />,
-            colorHex: "#3b82f6", // blue-500
+            colorHex: "#3b82f6", 
             iconBg: "bg-blue-50",
             title: "Depressão",
             description:
@@ -22,25 +22,25 @@ export default function Beneficios({
         },
         {
             id: "avc",
-            icon: <Zap size={36} strokeWidth={1.8} className="text-emerald-500" />,
-            colorHex: "#10b981", // emerald-500
-            iconBg: "bg-emerald-50",
+            icon: <Zap size={36} strokeWidth={1.8} className="text-teal-500" />,
+            colorHex: "#14B8A6", 
+            iconBg: "bg-teal-50",
             title: "AVC",
             description: "Reabilitação PÓS-AVC com nível A de evidência.",
         },
         {
             id: "dor",
-            icon: <Shield size={36} strokeWidth={1.8} className="text-rose-500" />,
-            colorHex: "#fb7185", // rose-500
-            iconBg: "bg-rose-50",
+            icon: <Shield size={36} strokeWidth={1.8} className="text-purple-700" />,
+            colorHex: "#7D4C8F", 
+            iconBg: "bg-purple-50",
             title: "Dor Crônica",
             description: "Melhora a dor de pacientes com dor crônica em até 50%.",
         },
         {
             id: "alzheimer",
-            icon: <Brain size={36} strokeWidth={1.8} className="text-violet-500" />,
-            colorHex: "#8b5cf6", // violet-500
-            iconBg: "bg-violet-50",
+            icon: <Brain size={36} strokeWidth={1.8} className="text-teal-500" />,
+            colorHex: "#14B8A6", 
+            iconBg: "bg-teal-50",
             title: "Alzheimer",
             description: "Retarda o declínio das funções cognitivas.",
         },
@@ -63,7 +63,7 @@ export default function Beneficios({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
                 {cards.map((c) => {
-                    const neutralBase = "0 6px 18px rgba(15, 23, 42, 0.2)"; // sutil
+                    const neutralBase = "0 6px 18px rgba(15, 23, 42, 0.2)"; 
 
                     const subtleColored = `0 8px 20px ${hexToRgba(c.colorHex, 0.1)}`;
 

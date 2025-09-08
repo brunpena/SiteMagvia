@@ -6,7 +6,9 @@ import { createRoutesFromElements, RouterProvider, Route, createBrowserRouter } 
 import { Layout } from './pages/_Layout';
 import { Informacoes } from './pages/Informacoes';
 import { SobreNos } from './pages/SobreNos';
-import { Contato } from './pages/contato';
+import { Contato } from './pages/Contato';
+import { Produtos } from './pages/Produtos';
+
 
 const rotas = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +18,7 @@ const rotas = createBrowserRouter(
       <Route path="informacoes" element={<Informacoes />} />
       <Route path="sobrenos" element={<SobreNos />} />
       <Route path="contato" element={<Contato />} />
+      <Route path="produtos" element={<Produtos />} />
 
     </Route>
   )

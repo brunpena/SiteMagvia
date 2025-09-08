@@ -3,7 +3,8 @@ import { Pagina } from "../components/pagina";
 import { useState } from "react";
 
 export function Contato() {
-  const [form, setForm] = useState({ email: "", nome: "", telefone: "" });
+  const texto = "Olá, gostaria de mais informações.";
+  const [form, setForm] = useState({ email: "", nome: "", telefone: "", mensagem: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,11 +15,41 @@ export function Contato() {
     console.log("Form enviado:", form);
   };
 
+  async function EnviarMensagem(e) {
+    e.preventDefault();
+    
+    try {
+      if (!form.email || !form.nome || !form.telefone || !form.mensagem) {
+        alert("Preencha todos os campos!")
+        return
+      }
+
+      const response = await fetch(`http://127.0.0.1:3000/enviarEmail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Erro ao enviar mensagem: ${response.statusText}`)
+      }
+
+      const dados = await response.json()
+      alert("Mensagem enviada com sucesso!")
+      setForm({ email: "", nome: "", telefone: "", mensagem: "" })
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <Pagina>
       <div className="flex flex-col items-center justify-center w-full min-h-[80vh] p-6">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">Contato</h1>
-        <p className="mb-8 text-center max-w-2xl text-gray-700">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Contato</h1>
+        <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12">
           Se você tiver alguma dúvida ou precisar de mais informações, preencha o formulário abaixo e entraremos em contato.
         </p>
 
@@ -62,9 +93,22 @@ export function Contato() {
             />
           </div>
 
+          <div className="flex flex-col">
+            <label className="text-gray-700 mb-2">Mensagem</label>
+            <input
+              type="text"
+              name="mensagem"
+              value={form.mensagem}
+              onChange={handleChange}
+              placeholder="Digite sua mensagem aqui..."
+              className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition-colors duration-300"
+            onClick={EnviarMensagem}
+            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition-colors duration-300 cursor-pointer"
           >
             Enviar mensagem
           </button>
@@ -76,10 +120,10 @@ export function Contato() {
           <IconLink href="https://www.instagram.com/magvia_oficial/#" color="pink">
             <FaInstagram />
           </IconLink>
-          <IconLink href="https://wa.me/44998322222" color="green">
+          <IconLink href={`https://wa.me/44999272304?text=${encodeURIComponent(texto)}`} color="green">
             <FaWhatsapp />
           </IconLink>
-          <IconLink href="mailto:joao.reni@magvia.com.br" color="red">
+          <IconLink href="mailto:felipe@magvia.com.br" color="red">
             <FaEnvelope />
           </IconLink>
         </div>

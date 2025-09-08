@@ -1,11 +1,10 @@
 import React from "react";
-import productImg from "../assets/maximus.png"; // ajuste o caminho se necessário
+import productImg from "/max.png"; 
 
 export default function ApresentacaoProduto() {
     return (
         <section className="overflow-x-hidden pt-4 pb-4">
             <div className="max-w-7xl mx-auto px-8  lg:px-14 py-20 lg:py-20 grid grid-cols-1 lg:grid-cols-2 items-center ">
-                {/* LEFT */}
                 <div className="lg:pr-8 flex flex-col items-start justify-center space-y-8">
                     <div className="w-64 md:w-80 lg:w-96 max-w-full overflow-hidden rounded-sm">
                         <img
@@ -34,10 +33,7 @@ export default function ApresentacaoProduto() {
                     </div>
                 </div>
 
-                {/* RIGHT */}
                 <div className="flex justify-center lg:justify-end">
-                    
-                    {/* use import acima para imagens dentro de src */}
                     <img
                     src={productImg}
                     alt="MAXIMUS EMT"

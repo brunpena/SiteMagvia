@@ -9,11 +9,10 @@ export default function cadastroEmail({
     onSubmit = null,
     }) {
     const [email, setEmail] = useState("");
-    const [status, setStatus] = useState("idle"); // idle | sending | success | error
+    const [status, setStatus] = useState("idle"); 
     const [error, setError] = useState("");
 
     function validateEmail(e) {
-        // validação simples
         return /\S+@\S+\.\S+/.test(e);
     }
 
@@ -28,11 +27,9 @@ export default function cadastroEmail({
         setStatus("sending");
         try {
             if (onSubmit && typeof onSubmit === "function") {
-                await onSubmit(email); // permite integração (API fetch, etc.)
+                await onSubmit(email); 
             } else {
-                // fallback: apenas log
                 console.log("Enviar e-mail para:", email);
-                // simular delay
                 await new Promise((r) => setTimeout(r, 800));
             }
             setStatus("success");
@@ -42,7 +39,6 @@ export default function cadastroEmail({
             setStatus("error");
             setError("Ocorreu um problema. Tente novamente.");
         } finally {
-        // manter a mensagem de sucesso por 3s
         setTimeout(() => {
             setStatus("idle");
             setError("");

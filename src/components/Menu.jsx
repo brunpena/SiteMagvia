@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaPhoneAlt } from "react-icons/fa";
 import { MdMedicalServices } from "react-icons/md";
+import { CgShoppingCart } from "react-icons/cg";
 
 export function Menu() {
   return (
@@ -11,6 +12,7 @@ export function Menu() {
 
           <MenuItem to="/" icon={<FaHome />} label="Início" />
           <MenuItem to="/informacoes" icon={<MdMedicalServices />} label="Informações" />
+          <MenuItem to="/produtos" icon={<CgShoppingCart />} label="Produtos" />
           <MenuItem to="/sobrenos" icon={<FaInfoCircle />} label="Sobre Nós" />
           <MenuItem to="/contato" icon={<FaPhoneAlt />} label="Contato" />
 
@@ -20,7 +22,6 @@ export function Menu() {
   );
 }
 
-// Componente auxiliar para itens do menu
 function MenuItem({ to, icon, label }) {
   return (
     <NavLink

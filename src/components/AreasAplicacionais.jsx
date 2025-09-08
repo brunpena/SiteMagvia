@@ -1,6 +1,6 @@
 import {Brain, Activity, Heart} from 'lucide-react'
 
-export default function AreasAplicasionais() {
+export function AreasAplicacionais() {
     return(
         <div className='w-full'>
             <section class="py-20 bg-teal-50">
@@ -26,7 +26,7 @@ export default function AreasAplicasionais() {
                         <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase">Neurologia</h3>
                         </article>
 
-                        <article class="bg-violet-500 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
+                        <article class="bg-purple-700 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
                         <div class="mb-6 p-3 bg-white/10 rounded-full">
                             <Heart size={48} strokeWidth={2} className="text-white" />
                         </div>
