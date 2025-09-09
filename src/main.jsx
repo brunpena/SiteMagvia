@@ -8,6 +8,8 @@ import { Informacoes } from './pages/Informacoes';
 import { SobreNos } from './pages/SobreNos';
 import { Contato } from './pages/Contato';
 import { Produtos } from './pages/Produtos';
+import { Acessorios } from './pages/Acessorios';
+import { SaibaMais } from './pages/SaibaMais';
 
 
 const rotas = createBrowserRouter(
@@ -19,6 +21,8 @@ const rotas = createBrowserRouter(
       <Route path="sobrenos" element={<SobreNos />} />
       <Route path="contato" element={<Contato />} />
       <Route path="produtos" element={<Produtos />} />
+      <Route path="acessorios" element={<Acessorios />} />
+      <Route path="saibamais" element={<SaibaMais />} />
 
     </Route>
   )
@@ -29,3 +33,4 @@ createRoot(document.getElementById("root")).render(
     <RouterProvider router={rotas} />
   </StrictMode>
 );
+

@@ -27,7 +27,7 @@ function CardInfo({ bg, icon, title, description }) {
     <div className={`flex flex-col items-center text-center justify-center w-72 h-52 rounded-xl shadow-md p-4 ${bg} transition-transform duration-300 hover:scale-105 hover:shadow-xl`}>
       {icon}
       <h1 className="font-bold text-lg mt-2">{title}</h1>
-      <p className="text-sm mt-2 text-gray-800">{description}</p>
+      <p className="text-sm mt-2 text-gray-800 ">{description}</p>
     </div>
   );
 }

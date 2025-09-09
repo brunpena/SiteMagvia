@@ -59,7 +59,7 @@ export function Beneficios({
         <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">{title}</h2>
-                <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12">{subtitle}</p>
+                <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12 ">{subtitle}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
                 {cards.map((c) => {
@@ -94,7 +94,7 @@ export function Beneficios({
 
                         <h3 id={`${c.id}-title`} className="text-base sm:text-lg font-bold tracking-wide uppercase text-gray-800 mb-3">{c.title}</h3>
 
-                        <p className="text-sm text-gray-500 leading-relaxed">{c.description}</p>
+                        <p className="text-sm text-gray-500 leading-relaxed text-justify">{c.description}</p>
                     </article>
                     );
                 })}

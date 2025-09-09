@@ -47,16 +47,18 @@ export function Contato() {
 
   return (
     <Pagina>
-      <div className="flex flex-col items-center justify-center w-full min-h-[80vh] p-6">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Contato</h1>
-        <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12">
-          Se você tiver alguma dúvida ou precisar de mais informações, preencha o formulário abaixo e entraremos em contato.
-        </p>
+      <div className="flex flex-col items-center justify-center w-full min-h-[80vh] p-6 mt-4 ">
+
+        
 
         <form 
           onSubmit={handleSubmit} 
           className="w-full max-w-xl bg-white shadow-md rounded-xl p-8 space-y-6"
         >
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Contato</h1>
+        <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-base mb-12 text-justify">
+          Se você tiver alguma dúvida ou precisar de mais informações, preencha o formulário abaixo e entraremos em contato.
+        </p>
           <div className="flex flex-col">
             <label className="text-gray-700 mb-2">Endereço de E-mail *</label>
             <input
@@ -95,16 +97,17 @@ export function Contato() {
 
           <div className="flex flex-col">
             <label className="text-gray-700 mb-2">Mensagem</label>
-            <input
-              type="text"
+            <textarea
               name="mensagem"
               value={form.mensagem}
+              maxLength={3000}
               onChange={handleChange}
-              placeholder="Digite sua mensagem aqui..."
-              className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              placeholder="Digite sua mensagem aqui...(máx. 3000 caracteres)"
+              rows={4}
+              className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-y"
             />
+            <p className="text-sm text-gray-500 mt-1">{form.mensagem.length}/3000</p>
           </div>
-
           <button
             type="submit"
             onClick={EnviarMensagem}
@@ -112,21 +115,19 @@ export function Contato() {
           >
             Enviar mensagem
           </button>
+          <br />
+          <div className="flex flex-row gap-8 text-3xl w-full justify-center ">
+            <IconLink href="https://www.instagram.com/magvia_oficial/#" color="pink">
+              <FaInstagram />
+            </IconLink>
+            <IconLink href={`https://wa.me/44999272304?text=${encodeURIComponent(texto)}`} color="green">
+              <FaWhatsapp />
+            </IconLink>
+            <IconLink href="mailto:felipe@magvia.com.br" color="red">
+              <FaEnvelope />
+            </IconLink>
+          </div>
         </form>
-        <br />
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">Ou entre em contato conosco!</h2>
-
-        <div className="flex flex-row gap-8 text-3xl">
-          <IconLink href="https://www.instagram.com/magvia_oficial/#" color="pink">
-            <FaInstagram />
-          </IconLink>
-          <IconLink href={`https://wa.me/44999272304?text=${encodeURIComponent(texto)}`} color="green">
-            <FaWhatsapp />
-          </IconLink>
-          <IconLink href="mailto:felipe@magvia.com.br" color="red">
-            <FaEnvelope />
-          </IconLink>
-        </div>
       </div>
     </Pagina>
   );

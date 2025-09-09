@@ -7,7 +7,7 @@ export function AreasAplicacionais() {
                 <div class="max-w-6xl mx-auto px-6 text-center">
                     <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Áreas de Aplicação</h2>
 
-                    <p class="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12">
+                    <p class="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12 text-justify">
                         O MAXIMUS EMT é utilizado em diversas especialidades médicas com resultados comprovados cientificamente
                     </p>
 
