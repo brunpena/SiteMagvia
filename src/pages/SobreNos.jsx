@@ -1,5 +1,6 @@
 import { Pagina } from "../components/pagina";
 import { FaLightbulb, FaEye, FaHeart } from "react-icons/fa";
+import { TypingText } from "../components/TypingText";
 
 export function SobreNos() {
   return (
@@ -70,7 +71,7 @@ function CardInfo({ title, description, icon, color }) {
       className={`${color} flex flex-col items-center justify-start text-center rounded-2xl p-8 shadow-md text-white transition-transform duration-300 hover:scale-105 h-full`}
     >
       <div className="mb-4 flex justify-center">{icon}</div>
-      <h2 className="text-xl font-semibold mb-4">{title}</h2>
+      <h2 className="text-xl font-semibold mb-4"><TypingText text={title} /></h2>
       <p className="text-sm leading-relaxed text-justify">{description}</p>
     </div>
   );

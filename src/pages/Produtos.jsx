@@ -1,7 +1,10 @@
+import React, { useState } from "react";
 import { Pagina } from "../components/pagina";
 import productImg from "/max.png"; 
 import productImg2 from "/maxClinic.png"; 
 import productImg3 from "/TDCS.png"; 
+import { Star } from "lucide-react";
+import { TypingText } from "../components/TypingText";
 
 export function Produtos() {
   return (
@@ -13,25 +16,28 @@ export function Produtos() {
           Desenvolvemos soluções tecnológicas em neuromodulação e equipamentos médicos, sempre com foco em inovação e qualidade.
         </p>
 
-        {/* Grid com altura igual para os cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl items-stretch">
-          <CardProduto
-            title="Maximus Versão Pro"
-            description="Estimulador Magnético Transcraniano de alta performance para diversas áreas médicas."
-            icon={<img src={productImg} alt="Maximus Versão Pro" className="object-contain" />}
-            color="bg-blue-500"
-          />
           <CardProduto
             title="TDCS"
             description="Estimulador Transcraniano por Corrente Contínua, um equipamento moderno desenvolvido para auxiliar em diversas áreas da saúde e do bem-estar."
-            icon={<img src={productImg3} alt="TDCS" className="object-contain" />}
-            color="bg-teal-500"
+            icon={<img src={productImg3} alt="TDCS" className="object-contain " />}
+            colorHex="#3B82F6"
           />
+
+          <CardProduto
+            title="Maximus Versão Pro"
+            description="Estimulador Magnético Transcraniano de alta performance para diversas áreas médicas."
+            icon={<img src={productImg} alt="Maximus Versão Pro" className="object-contain " />}
+            colorHex="#14B8A6"
+            className="bg-teal-50 border-teal-200 border-2"
+            highlight={true}
+          />
+
           <CardProduto
             title="Maximus Clinic"
             description="Tecnologia de ponta em neuromodulação, com alta performance e precisão. Desenvolvido para atender diversas áreas médicas, garante eficácia, segurança e inovação em cada aplicação."
-            icon={<img src={productImg2} alt="Maximus Clinic" className="object-contain" />}
-            color="bg-purple-700"
+            icon={<img src={productImg2} alt="Maximus Clinic" className="object-contain " />}
+            colorHex="#7E22CE"
           />
         </div>
       </div>
@@ -39,17 +45,50 @@ export function Produtos() {
   );
 }
 
-function CardProduto({ title, description, icon, color }) {
+function CardProduto({ title, description, icon, colorHex, className = "", highlight = false }) {
+  const [hovered, setHovered] = useState(false);
+
+  function hexToRgba(hex, alpha = 0.18) {
+    const h = hex.replace("#", "");
+    const bigint = parseInt(h, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  const neutralBase = "0 6px 18px rgba(15, 23, 42, 0.1)";
+  const subtleColored = `0 8px 20px ${hexToRgba(colorHex, 0.1)}`;
+  const hoverColored = `0 20px 40px ${hexToRgba(colorHex, 0.175)}, 0 6px 18px rgba(15,23,42,0.05)`;
+
+  const boxShadow = hovered ? hoverColored : `${neutralBase}, ${subtleColored}`;
+
   return (
     <div
-      className={`${color} flex flex-col items-center rounded-2xl p-8 shadow-md text-white transition-transform duration-300 hover:scale-105 h-full`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={`flex flex-col justify-between items-center rounded-2xl p-8 
+                 transition-transform duration-300 ease-out transform hover:-translate-y-1 h-full text-center ${className}`}
+      style={{ boxShadow }}
     >
-      {/* Imagem sem altura fixa */}
-      <div className="flex items-center justify-center mb-6 w-full">
+      <div className="flex h-88 items-center justify-center w-full mb-6">
         {icon}
       </div>
-      <h2 className="text-xl font-semibold mb-4 text-center">{title}</h2>
-      <p className="text-sm leading-relaxed text-justify">{description}</p>
+
+      <div className="flex flex-col justify-between flex-1">
+        <h2 className="text-xl font-semibold mb-4 text-gray-900 flex items-center justify-center gap-2">
+          <TypingText text={title} />
+          {highlight && <Star className="w-5 h-5 text-yellow-500 fill-yellow-400" />}
+        </h2>
+
+        <p className="text-sm leading-relaxed text-gray-600 text-justify mb-6">
+          {description}
+        </p>
+
+        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition cursor-pointer                ">
+          Saiba mais
+        </button>
+      </div>
     </div>
   );
 }

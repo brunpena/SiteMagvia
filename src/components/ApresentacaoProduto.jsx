@@ -1,11 +1,12 @@
 import React from "react";
 import productImg from "/max.png"; 
+import { TypingText } from "./TypingText";
 
 export default function ApresentacaoProduto() {
     const texto = "Bom dia! Gostaria de fazer um orçamento.";
 
     return (
-        <section className="overflow-x-hidden pt-4">
+        <section className="overflow-x-hidden pt-18">
             <div className="max-w-7xl mx-auto px-8  lg:px-14 grid grid-cols-1 lg:grid-cols-2 items-center ">
                 <div className="lg:pr-8 flex flex-col items-start justify-center space-y-8">
                     <div className="w-64 md:w-80 lg:w-96 max-w-full overflow-hidden rounded-sm">
@@ -17,7 +18,7 @@ export default function ApresentacaoProduto() {
                     </div>
 
                     <p className="text-gray-600 text-xl md:text-xl max-w-xl leading-7 text-justify">
-                        Tecnologia avançada em neuromodulação não invasiva para tratamentos eficazes e seguros.
+                        <TypingText text="Tecnologia avançada em neuromodulação não invasiva para tratamentos eficazes e seguros." speed={200} />
                     </p>
 
                     <div className="flex items-center space-x-4">

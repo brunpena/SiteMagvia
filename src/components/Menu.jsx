@@ -7,9 +7,9 @@ import { Glasses } from "lucide-react";
 export function Menu() {
   return (
     <div className="w-full bg-white shadow-md p-4 fixed top-0 left-0 z-50 flex justify-between items-center">
-      <img src="/magviaLogo.png" alt="Mag Logo" className="w-15"/>
+      <img src="/magviaLogo.png" alt="Mag Logo" className="w-15 ml-4"/>
       <nav className="">
-        <div className="flex flex-row m-1 space-x-3">
+        <div className="flex flex-row m-1 space-x-3 mr-4">
 
           <MenuItem to="/" icon={<FaHome />} label="Início" />
           <MenuItem to="/informacoes" icon={<MdMedicalServices />} label="Informações" />

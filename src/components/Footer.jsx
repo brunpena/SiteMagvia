@@ -11,7 +11,7 @@ export default function Footer({
     ],
 }) {
     return (
-        <footer className="mt-12">
+        <footer className="">
             <div className="bg-white">
                 {/* Topo do Footer */}
                 <div className="max-w-6xl mx-auto px-6 pt-6 pb-2 flex flex-col md:flex-row items-center justify-between gap-4">

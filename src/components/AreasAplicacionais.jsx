@@ -1,4 +1,5 @@
 import {Brain, Activity, Heart} from 'lucide-react'
+import { TypingText } from './TypingText'
 
 export function AreasAplicacionais() {
     return(
@@ -16,21 +17,21 @@ export function AreasAplicacionais() {
                         <div class="mb-6 p-3 bg-white/10 rounded-full">
                             <Brain size={48} strokeWidth={2} className="text-white" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase">Psiquiatria</h3>
+                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Psiquiatria"} /></h3>
                         </article>
 
                         <article class="bg-teal-500 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
                         <div class="mb-6 p-3 bg-white/10 rounded-full">
                             <Activity size={48} strokeWidth={2} className="text-white" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase">Neurologia</h3>
+                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Neurologia"} /></h3>
                         </article>
 
                         <article class="bg-purple-700 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
                         <div class="mb-6 p-3 bg-white/10 rounded-full">
                             <Heart size={48} strokeWidth={2} className="text-white" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase">Fisioterapia</h3>
+                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Fisioterapia"} /></h3>
                         </article>
                     </div>
                 </div>
