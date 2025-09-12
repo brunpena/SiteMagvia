@@ -81,7 +81,7 @@ function CardProduto({ title, description, icon, colorHex, className = "", highl
           {highlight && <Star className="w-5 h-5 text-yellow-500 fill-yellow-400" />}
         </h2>
 
-        <p className="text-sm leading-relaxed text-gray-600 text-justify mb-6">
+        <p className="text-sm leading-relaxed h-30 text-gray-600 text-justify mb-6">
           {description}
         </p>
 
