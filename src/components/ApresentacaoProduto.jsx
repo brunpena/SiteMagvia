@@ -1,6 +1,7 @@
 import React from "react";
 import productImg from "/max.png"; 
 import { TypingText } from "./TypingText";
+import { IceCream, MoreHorizontalIcon } from "lucide-react";
 
 export default function ApresentacaoProduto() {
     const texto = "Bom dia! Gostaria de fazer um orçamento.";
@@ -18,7 +19,7 @@ export default function ApresentacaoProduto() {
                     </div>
 
                     <p className="text-gray-600 text-xl md:text-xl max-w-xl leading-7 text-justify">
-                        <TypingText text="Tecnologia avançada em neuromodulação não invasiva para tratamentos eficazes e seguros." speed={200} />
+                        <TypingText text="Tecnologia avançada em neuromodulação não invasiva para tratamentos eficazes e seguros." speed={40} />
                     </p>
 
                     <div className="flex items-center space-x-4">
@@ -28,7 +29,7 @@ export default function ApresentacaoProduto() {
 
                         <a href="/saibamais" className="flex items-center gap-3 px-5 py-3 rounded-full border-2 border-blue-500 text-blue-600 hover:bg-blue-50 transition">
                             <span className="rounded-full w-6 h-6 flex items-center justify-center border border-blue-300">
-                                ▶
+                                <MoreHorizontalIcon className="w-4 h-4 text-blue-500" />
                             </span>
                             <span>Saiba Mais</span>
                         </a>

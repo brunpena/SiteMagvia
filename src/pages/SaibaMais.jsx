@@ -11,7 +11,7 @@ export function SaibaMais() {
             </h1>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">
-            Estamos em fase de desenvolvimento do <span className="font-semibold">1º Estimulador Magnético Transcraniano do Brasil</span>.
+            Estamos em fase de certificação do <span className="font-semibold">1º Estimulador Magnético Transcraniano do Brasil</span>.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed text-justify">

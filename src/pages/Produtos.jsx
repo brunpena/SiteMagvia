@@ -3,8 +3,10 @@ import { Pagina } from "../components/pagina";
 import productImg from "/max.png"; 
 import productImg2 from "/maxClinic.png"; 
 import productImg3 from "/TDCS.png"; 
+import productImg4 from "/magBee.png";
 import { Star } from "lucide-react";
 import { TypingText } from "../components/TypingText";
+import { NavLink } from "react-router-dom";
 
 export function Produtos() {
   return (
@@ -18,34 +20,48 @@ export function Produtos() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl items-stretch">
           <CardProduto
-            title="TDCS"
-            description="Estimulador Transcraniano por Corrente Contínua, um equipamento moderno desenvolvido para auxiliar em diversas áreas da saúde e do bem-estar."
-            icon={<img src={productImg3} alt="TDCS" className="object-contain " />}
-            colorHex="#3B82F6"
-          />
-
-          <CardProduto
-            title="Maximus Versão Pro"
+            title="Maximus Pro"
             description="Estimulador Magnético Transcraniano de alta performance para diversas áreas médicas."
-            icon={<img src={productImg} alt="Maximus Versão Pro" className="object-contain " />}
+            icon={<img src={productImg} alt="Maximus Pro" className="object-contain " />}
             colorHex="#14B8A6"
             className="bg-teal-50 border-teal-200 border-2"
             highlight={true}
+            link="/sobreprodutos/maximus"
           />
-
+  
           <CardProduto
             title="Maximus Clinic"
             description="Tecnologia de ponta em neuromodulação, com alta performance e precisão. Desenvolvido para atender diversas áreas médicas, garante eficácia, segurança e inovação em cada aplicação."
             icon={<img src={productImg2} alt="Maximus Clinic" className="object-contain " />}
             colorHex="#7E22CE"
+            link="/sobreprodutos/maximus-clinic"
           />
+          
+          <CardProduto
+            title="MagBee"
+            description="A MagBee traz a potência da Estimulação Magnética Transcraniana em um formato compacto e funcional. Com design em formato de banco, alia performance de alto nível com praticidade no ambiente clínico."
+            icon={<img src={productImg4} alt="MagBee" className="object-contain" />}
+            colorHex="#14B8A6"
+            link="/sobreprodutos/sobre-acessorios/magbee"
+          />
+          
+
+          <CardProduto
+            title="TDCS"
+            description="Estimulador Transcraniano por Corrente Contínua, um equipamento moderno desenvolvido para auxiliar em diversas áreas da saúde e do bem-estar."
+            icon={<img src={productImg3} alt="TDCS" className="object-contain " />}
+            colorHex="#3B82F6"
+            link="/sobreprodutos/tdcs"
+          />
+
+          
         </div>
       </div>
     </Pagina>
   );
 }
 
-function CardProduto({ title, description, icon, colorHex, className = "", highlight = false }) {
+function CardProduto({ title, description, icon, colorHex, className = "", highlight = false, link = "#" }) {
   const [hovered, setHovered] = useState(false);
 
   function hexToRgba(hex, alpha = 0.18) {
@@ -85,10 +101,11 @@ function CardProduto({ title, description, icon, colorHex, className = "", highl
           {description}
         </p>
 
-        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition cursor-pointer                ">
+        <NavLink to={link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition cursor-pointer">
           Saiba mais
-        </button>
+        </NavLink>
       </div>
     </div>
   );
 }
+

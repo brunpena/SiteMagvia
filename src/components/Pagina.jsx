@@ -3,7 +3,7 @@ export function Pagina(props) {
     <div className="flex flex-col flex-1">
       <main
         className={`
-          flex flex-1 flex-col
+          flex flex-1 ${props.row ? "flex-row items-center justify-center" : "flex-col"}
           pt-20  /* espaço para o menu fixo */
           bg-white
           text-base text-gray-900 font-sans

@@ -10,7 +10,7 @@ export function Layout() {
         w-screen min-h-screen       
     `}
     >
-        <Menu/>
+      <Menu/>
       <main className="flex flex-col flex-1">
         <Outlet />
         <Footer />

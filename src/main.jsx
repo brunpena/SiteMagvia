@@ -10,6 +10,13 @@ import { Contato } from './pages/Contato';
 import { Produtos } from './pages/Produtos';
 import { Acessorios } from './pages/Acessorios';
 import { SaibaMais } from './pages/SaibaMais';
+import { SobreMaximus } from './pages/SobreProdutos/SobreMaximus';
+import { SobreMaximusClinic } from './pages/SobreProdutos/SobreMaximusClinic';
+import { SobreTDCS } from './pages/SobreProdutos/SobreTDCS';
+import { SobreBobinaCircular } from './pages/SobreProdutos/SobreAcessorios/SobreBobinaCircular';
+import { SobreBobina8 } from './pages/SobreProdutos/SobreAcessorios/SobreBobina8';
+import { SobreMagBee } from './pages/SobreProdutos/SobreAcessorios/SobreMagBee';
+import { Page404 } from './pages/page404';
 
 
 const rotas = createBrowserRouter(
@@ -23,6 +30,14 @@ const rotas = createBrowserRouter(
       <Route path="produtos" element={<Produtos />} />
       <Route path="acessorios" element={<Acessorios />} />
       <Route path="saibamais" element={<SaibaMais />} />
+      <Route path="sobreprodutos/maximus" element={<SobreMaximus />} />
+      <Route path="sobreprodutos/maximus-clinic" element={<SobreMaximusClinic />} />
+      <Route path="sobreprodutos/tdcs" element={<SobreTDCS />} />
+      <Route path="sobreprodutos/sobre-acessorios/bobina-circular" element={<SobreBobinaCircular />} />
+      <Route path="sobreprodutos/sobre-acessorios/bobina-8" element={<SobreBobina8 />} />
+      <Route path="sobreprodutos/sobre-acessorios/magbee" element={<SobreMagBee />} />
+      <Route path="*" element={<Page404 />} />
+      
 
     </Route>
   )

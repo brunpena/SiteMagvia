@@ -1,6 +1,7 @@
 import { Pagina } from "../components/pagina";
 import { FaLightbulb, FaEye, FaHeart } from "react-icons/fa";
 import { TypingText } from "../components/TypingText";
+import { Mapa } from "../components/mapa";
 
 export function SobreNos() {
   return (
@@ -59,6 +60,10 @@ export function SobreNos() {
             color="bg-purple-700"
           />
 
+        </div>
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-16">Localização</h1>
+        <div className="mt-4 w-full max-w-5xl">
+          <Mapa />
         </div>
       </div>
     </Pagina>
