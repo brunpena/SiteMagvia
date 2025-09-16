@@ -3,6 +3,8 @@ import productImg from "/max.png";
 import acessorio1 from "/BobSimples.png"
 import acessorio2 from "/BobDupla.png"
 import acessorio3 from "/magBee.png"
+import caraFeliz from "/caraFeliz.png"
+import mulherAssustada from "/mulherAssustada.png"
 
 export function SobreMaximus() {
   return (
@@ -65,6 +67,55 @@ export function SobreMaximus() {
             >
               Falar com a gente
             </a>
+          </div>
+        </div>
+        <div className="mt-16 w-full flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-11/12 md:w-3/4">
+            <figure
+              className="group bg-white/90 rounded-2xl p-4 shadow-md hover:shadow-2xl transition transform duration-300 hover:-translate-y-1 flex items-center justify-center group-hover:ring-4 group-hover:ring-[#14B8A6] group-hover:ring-opacity-20
+"
+              aria-label="Paciente surpresa"
+            >
+              <div className="w-full h-48 rounded-xl overflow-hidden flex items-center justify-center
+                              bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                <img
+                  src={mulherAssustada}
+                  alt="Paciente demonstrando reação"
+                  className="max-h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+
+            <figure
+              className="group bg-white/90 rounded-2xl p-4 shadow-md hover:shadow-2xl transition transform duration-300 hover:-translate-y-1 flex items-center justify-center"
+              aria-label="Paciente feliz"
+            >
+              <div className="w-full h-48 rounded-xl overflow-hidden flex items-center justify-center
+                              bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                <img
+                  src={caraFeliz}
+                  alt="Paciente feliz após tratamento"
+                  className="max-h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
+
+            <figure
+              className="group bg-white/90 rounded-2xl p-4 shadow-md hover:shadow-2xl transition transform duration-300 hover:-translate-y-1 flex items-center justify-center"
+              aria-label="Paciente feliz"
+            >
+              <div className="w-full h-48 rounded-xl overflow-hidden flex items-center justify-center
+                              bg-gradient-to-br from-gray-50 to-gray-100 p-3">
+                <img
+                  src={caraFeliz}
+                  alt="Paciente satisfeito"
+                  className="max-h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </figure>
           </div>
         </div>
       </div>

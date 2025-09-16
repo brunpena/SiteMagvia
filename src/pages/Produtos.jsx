@@ -101,7 +101,7 @@ function CardProduto({ title, description, icon, colorHex, className = "", highl
           {description}
         </p>
 
-        <NavLink to={link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition cursor-pointer">
+        <NavLink to={link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-50 hover:border border-blue-500 hover:text-blue-500 transition cursor-pointer">
           Saiba mais
         </NavLink>
       </div>

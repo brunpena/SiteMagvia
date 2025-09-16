@@ -76,7 +76,7 @@ export function Contato() {
   return (
     <Pagina>
       <div className="flex flex-col items-center justify-center w-full min-h-[80vh] p-6 mt-4">
-        <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="w-full max-w-6xl flex flex-col gap-8">
           <form
             onSubmit={handleSubmit}
             className="w-full bg-white shadow-md rounded-xl p-8 space-y-6"
@@ -165,7 +165,7 @@ export function Contato() {
             </div>
           </form>
 
-          <aside className="w-full bg-white shadow-md rounded-xl p-6 flex flex-col justify-between">
+          <div className="w-full bg-white shadow-md rounded-xl p-6 flex flex-col justify-between">
             <div>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">Informações de contato</h1>
 
@@ -288,7 +288,7 @@ export function Contato() {
                 <FaInstagram /> Visitar Instagram
               </a>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </Pagina>

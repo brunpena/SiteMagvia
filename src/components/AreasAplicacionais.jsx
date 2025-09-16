@@ -13,25 +13,34 @@ export function AreasAplicacionais() {
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch">
-                        <article class="bg-blue-500 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
-                        <div class="mb-6 p-3 bg-white/10 rounded-full">
-                            <Brain size={48} strokeWidth={2} className="text-white" />
+                        <article className="group bg-blue-500 rounded-2xl shadow-lg transition-colors duration-300 p-10 flex flex-col items-center justify-center hover:bg-blue-50">
+                        <div className="mb-6 p-3 rounded-full bg-white/10 transition-colors duration-300 group-hover:bg-blue-50 group-hover:border-1 group-hover:border-blue-500">
+                            <Brain size={48} strokeWidth={2} className="text-white transition-colors duration-300 group-hover:text-blue-500" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Psiquiatria"} /></h3>
+
+                        <h3 className="text-lg sm:text-xl font-bold tracking-wide uppercase text-white transition-colors duration-300 group-hover:text-blue-500">
+                            <TypingText text={"Psiquiatria"} />
+                        </h3>
                         </article>
 
-                        <article class="bg-teal-500 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
-                        <div class="mb-6 p-3 bg-white/10 rounded-full">
-                            <Activity size={48} strokeWidth={2} className="text-white" />
+                        <article className="group bg-teal-500 rounded-2xl shadow-lg transition-colors duration-300 p-10 flex flex-col items-center justify-center hover:bg-teal-50">
+                        <div className="mb-6 p-3 rounded-full bg-white/10 transition-colors duration-300 group-hover:bg-teal-50 group-hover:border-2 group-hover:border-teal-500">
+                            <Activity size={48} strokeWidth={2} className="text-white transition-colors duration-300 group-hover:text-teal-500" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Neurologia"} /></h3>
+
+                        <h3 className="text-lg sm:text-xl font-bold tracking-wide uppercase text-white transition-colors duration-300 group-hover:text-teal-500">
+                            <TypingText text={"Neurologia"} />
+                        </h3>
                         </article>
 
-                        <article class="bg-purple-700 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform p-10 flex flex-col items-center justify-center text-white">
-                        <div class="mb-6 p-3 bg-white/10 rounded-full">
-                            <Heart size={48} strokeWidth={2} className="text-white" />
+                        <article className="group bg-purple-700 rounded-2xl shadow-lg transition-colors duration-300 p-10 flex flex-col items-center justify-center hover:bg-purple-50">
+                        <div className="mb-6 p-3 rounded-full bg-white/10 transition-colors duration-300 group-hover:bg-purple-50 group-hover:border-2 group-hover:border-purple-700">
+                            <Heart size={48} strokeWidth={2} className="text-white transition-colors duration-300 group-hover:text-purple-700" />
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold tracking-wide uppercase"><TypingText text={"Fisioterapia"} /></h3>
+
+                        <h3 className="text-lg sm:text-xl font-bold tracking-wide uppercase text-white transition-colors duration-300 group-hover:text-purple-700">
+                            <TypingText text={"Fisioterapia"} />
+                        </h3>
                         </article>
                     </div>
                 </div>
