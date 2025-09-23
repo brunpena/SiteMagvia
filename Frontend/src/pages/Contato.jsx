@@ -1,6 +1,7 @@
-import { FaEnvelope, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaClock, FaCopy } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaClock, FaCopy, FaFlag } from "react-icons/fa";
 import { Pagina } from "../components/pagina";
 import { useState } from "react";
+import { BR, US, ES, FR } from "country-flag-icons/react/3x2";
 
 export function Contato() {
   const texto = "Olá, gostaria de mais informações.";
@@ -11,24 +12,110 @@ export function Contato() {
     mensagem: "",
   });
 
-  // Dados visíveis de contato (faça alterações aqui se quiser)
+  const FLAGS = {BR, US, ES, FR};
+  const [paisSelecionado, setPaisSelecionado] = useState("BR"); 
+
   const contatoVisivel = {
     email: "contato@magvia.com.br",
-    telefoneE164: "+5544999272304", // formato E.164 para links
+    telefoneE164: "+5544999272304", 
     telefoneExibicao: "+55 (44) 99927-2304",
-    whatsappE164: "5544999272304", // sem sinal para wa.me
+    whatsappE164: "5544999272304", 
     instagram: "magvia_oficial",
     endereco: "Fundação Educere, Campo Mourão - PR",
     horario: "Seg–Sex, 08:00–18:00",
   };
 
+  function formatPhoneNumber(value) {
+    switch (paisSelecionado) {
+      case "BR":
+        let vBr = value.replace(/\D/g, "");
+
+        if (vBr.startsWith("55")) {
+          vBr = "+" + vBr;
+        } else if (!vBr.startsWith("+")) {
+          vBr = "+".concat(vBr);
+        }
+
+        if (vBr.length > 3) {
+          vBr = vBr.replace(/^(\+\d{2})(\d{2})(\d{5})(\d{0,4}).*/, "$1 ($2) $3-$4");
+        } else if (vBr.length > 2) {
+          vBr = vBr.replace(/^(\+\d{2})(\d*)/, "$1 $2");
+        }
+
+        return vBr.trim();
+      case "US":
+        let vUs = value.replace(/\D/g, "");
+
+        if (vUs.startsWith("1")) {
+          vUs = "+" + vUs;
+        } else if (!vUs.startsWith("+")) {
+          vUs = "+".concat(vUs);
+        }
+
+        if (vUs.length > 3) {
+          vUs = vUs.replace(/^(\+\d{1})(\d{3})(\d{3})(\d{0,4}).*/, "$1 ($2) $3-$4");
+        } else if (vUs.length > 2) {
+          vUs = vUs.replace(/^(\+\d{1})(\d*)/, "$1 $2");
+        }
+
+        return vUs.trim();
+      case "ES":
+        let vEs = value.replace(/\D/g, "");
+
+        if (vEs.startsWith("34")) {
+          vEs = "+" + vEs;
+        } else if (!vEs.startsWith("+")) {
+          vEs = "+".concat(vEs);
+        }
+
+        if (vEs.length > 3) {
+          vEs = vEs.replace(
+            /^(\+34)(\d{3})(\d{3})(\d{0,3}).*/,
+            "$1 $2 $3 $4"
+          );
+        } else if (vEs.length > 2) {
+          vEs = vEs.replace(/^(\+\d{2})(\d*)/, "$1 $2");
+        }
+
+        return vEs.trim();
+      case "FR":
+        let vFr = value.replace(/\D/g, "");
+        
+        if (vFr.startsWith("33")) {
+          vFr = "+" + vFr;
+        } else if (!vFr.startsWith("+")) {
+          vFr = "+".concat(vFr);
+        }
+        
+        if (vFr.length > 3) {
+          vFr = vFr.replace(
+            /^(\+33)(\d{1})(\d{2})(\d{2})(\d{2})(\d{0,2}).*/,
+            "$1 $2 $3 $4 $5 $6"
+          );
+        } else if (vFr.length > 2) {
+          vFr = vFr.replace(/^(\+\d{2})(\d*)/, "$1 $2");
+        }
+
+        return vFr.trim();
+
+      default:
+        break;
+    }
+
+  }
+
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === "telefone") {
+      setForm({ ...form, telefone: formatPhoneNumber(value) });
+    } else {
+      setForm({ ...form, [name]: value });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // se quiser manter envio local, chamar EnviarMensagem no onSubmit ou no botão
     console.log("Form submit (local):", form);
   };
 
@@ -72,13 +159,40 @@ export function Contato() {
     );
   }
 
-function checkNumber() {
-  let numero = form.telefone.trim();
-  const regex = /^\+?[1-9]\d{7,14}$/;
-  return regex.test(numero.replace(/\s+/g, "")); 
-}
+  function checkNumber(number) {
+    switch (paisSelecionado) {
+      case "BR":
+        return number.startsWith("+55") && number.length === 19;
+      case "US":
+        return number.startsWith("+1") && (number.length === 17 || number.length === 18);
+      case "ES":
+        return number.startsWith("+34") && number.length === 15;
+      case "FR":
+        return number.startsWith("+33") && number.length === 17;
+      default:
+        break;
+    }
+  }
 
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
 
+  function verificarPlaceholders() {
+    switch (paisSelecionado) {
+      case "BR":
+        return "Ex. +55 (12) 92764-9823";
+      case "US":
+        return "Ex. +1 (202) 555-0123";
+      case "ES":
+        return "Ex. +34 612 34 56 78";
+      case "FR":
+        return "Ex. +33 1 23 45 67 89";
+      default:
+        break;
+    }
+  }
 
   return (
     <Pagina>
@@ -96,7 +210,7 @@ function checkNumber() {
             </p>
 
             <div className="flex flex-col">
-              <label className="text-gray-700 mb-2">Endereço de E-mail *</label>
+              <label className="text-gray-700 mb-2">Endereço de E-mail <strong className="text-red-600">*</strong></label>
               <input
                 type="email"
                 name="email"
@@ -104,12 +218,14 @@ function checkNumber() {
                 onChange={handleChange}
                 placeholder="Ex. gerivaldoantunes@gmail.com"
                 required
-                className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                className={`border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
+                  form.email && (validateEmail(form.email) ? "border-green-400 focus:ring-green-400" : "border-red-400 focus:ring-red-400")
+                }`}
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-gray-700 mb-2">Nome *</label>
+              <label className="text-gray-700 mb-2">Nome <strong className="text-red-600">*</strong></label>
               <input
                 type="text"
                 name="nome"
@@ -122,20 +238,48 @@ function checkNumber() {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-gray-700 mb-2">Telefone *</label>
-              <input
-                type="tel"
-                name="telefone"
-                value={form.telefone}
-                onChange={handleChange}
-                placeholder="Ex. +55 (12) 9 1234-5678"
-                required
-                className={`border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 ${checkNumber() ? "border-green-400 focus:ring-green-400" : "border-red-400 focus:ring-red-400"}`}
-              />
+              <label className="text-gray-700 mb-2">Telefone <strong className="text-red-600">*</strong></label>
+
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 border border-gray-300 rounded-lg px-2 py-1 bg-white">
+                  <select
+                    value={paisSelecionado}
+                    onChange={(e) => setPaisSelecionado(e.target.value)}
+                    className="bg-transparent h-9 focus:outline-none cursor-pointer"
+                  >
+                    <option className="cursor-pointer" value="BR">+55</option>
+                    <option className="cursor-pointer" value="US">+1</option>
+                    <option className="cursor-pointer" value="ES">+34</option>
+                    <option className="cursor-pointer" value="FR">+33</option>
+                  </select>
+
+                  {(() => {
+                    const FlagComponent = FLAGS[paisSelecionado];
+                    return FlagComponent ? (
+                      <FlagComponent className="w-6 h-4 rounded-sm" title={paisSelecionado} />
+                    ) : null;
+                  })()}
+                </div>
+
+                <input
+                  type="tel"
+                  name="telefone"
+                  value={form.telefone}
+                  placeholder={verificarPlaceholders()}
+                  onChange={handleChange}
+                  required
+                  className={`flex-1 min-w-0 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
+                    form.telefone.length > 1 &&
+                    (checkNumber(form.telefone)
+                      ? "border-green-400 focus:ring-green-400"
+                      : "border-red-400 focus:ring-red-400")
+                  }`}
+                />
+              </div>
             </div>
 
             <div className="flex flex-col">
-              <label className="text-gray-700 mb-2">Mensagem *</label>
+              <label className="text-gray-700 mb-2">Mensagem <strong className="text-red-600">*</strong></label>
               <textarea
                 name="mensagem"
                 value={form.mensagem}
@@ -189,7 +333,7 @@ function checkNumber() {
                       </a>
                       <button
                         onClick={() => copyToClipboard(contatoVisivel.email, "E-mail")}
-                        className="ml-2 text-gray-400 cursor-pointer hover:text-gray-600"
+                        className="text-gray-400 cursor-pointer hover:text-gray-600"
                         aria-label="Copiar email"
                       >
                         <FaCopy />
@@ -211,7 +355,7 @@ function checkNumber() {
                       </a>
                       <button
                         onClick={() => copyToClipboard(contatoVisivel.telefoneE164, "Telefone")}
-                        className="ml-2 text-gray-400 cursor-pointer hover:text-gray-600"
+                        className="text-gray-400 cursor-pointer hover:text-gray-600"
                         aria-label="Copiar telefone"
                       >
                         <FaCopy />

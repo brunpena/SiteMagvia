@@ -47,7 +47,7 @@ export function SobreMaximusClinic() {
           </div>
 
           <div className="bg-purple-50 border-l-4 border-purple-500 rounded-lg p-6 space-y-4">
-            <h2 className="text-2xl font-bold text-purple-700">Diferenciais da Maximus</h2>
+            <h2 className="text-2xl font-bold text-purple-700">Diferenciais da Maximus Clinic</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li><strong>Alta Performance:</strong> A Maximus oferece uma performance superior, garantindo eficácia e segurança em cada aplicação.</li>
               <li><strong>Precisão:</strong> Com tecnologia avançada, permite a estimulação precisa de áreas específicas do cérebro, otimizando os resultados terapêuticos.</li>

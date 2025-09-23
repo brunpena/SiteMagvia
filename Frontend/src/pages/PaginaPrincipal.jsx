@@ -9,8 +9,3 @@ export function PaginaPrincipal() {
     </Pagina>
   );
 } 
-{/*
-  - cards sobre nos: tirar animação de aumentar e colocar alteração de cor
-  - colocar fotos dos produtos: sendo usado, campo magnético, 
-  
-  */}

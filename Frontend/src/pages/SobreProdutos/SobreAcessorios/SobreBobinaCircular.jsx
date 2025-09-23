@@ -36,7 +36,7 @@ export function SobreBobinaCircular() {
           </div>
 
           <div className="bg-blue-50 border-l-4 border-[#3B82F6] rounded-lg p-6 space-y-4">
-            <h2 className="text-2xl font-bold text-[#3B82F6]">Diferenciais da TDCS</h2>
+            <h2 className="text-2xl font-bold text-[#3B82F6]">Diferenciais da Bobina Circular</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li><strong>Alta Performance:</strong> A TDCS oferece uma performance superior, garantindo eficácia e segurança em cada aplicação.</li>
               <li><strong>Precisão:</strong> Com tecnologia avançada, permite a estimulação precisa de áreas específicas do cérebro, otimizando os resultados terapêuticos.</li>

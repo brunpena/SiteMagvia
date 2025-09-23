@@ -1,5 +1,5 @@
-var nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -25,18 +25,17 @@ var mailOptions = {
   text: ''
 };
 
-let enviarEmail = function(emailDestino, assunto, mensagem, email){
-    mailOptions.to = emailDestino;
-    mailOptions.subject = assunto;
-    mailOptions.text = mensagem;
-    mailOptions.replyTo = email;
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-    });
-}
+export function enviarEmail(emailDestino, assunto, mensagem, email) {
+  mailOptions.to = emailDestino;
+  mailOptions.subject = assunto;
+  mailOptions.text = mensagem;
+  mailOptions.replyTo = email;
 
-module.exports = enviarEmail;
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+}

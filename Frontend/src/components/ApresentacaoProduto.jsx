@@ -53,19 +53,19 @@ export default function ApresentacaoProduto() {
             <div className="w-full h-full flex flex-col lg:flex-row justify-between p-6 sm:p-10 text-base sm:text-lg md:text-xl lg:text-2xl text-justify">
                 <div className="flex-1 lg:w-1/2 m-2 sm:m-4">
                 <p>
-                    EMT (Estimulação Magnética Transcraniana) é uma técnica inovadora de neuromodulação não invasiva que utiliza campos magnéticos para estimular áreas específicas do cérebro. É uma abordagem promissora para o tratamento de diversas condições neurológicas e psiquiátricas.
+                    A Estimulação Magnética Transcraniana (EMT) é uma técnica avançada de neuromodulação não invasiva que utiliza campos magnéticos para estimular regiões específicas do cérebro. Por meio dessa abordagem, é possível modular a atividade neural de forma precisa, oferecendo novas perspectivas no tratamento de condições neurológicas e psiquiátricas.
                 </p>
                 <br />
                 <p>
-                    A técnica é indolor e não requer anestesia, tornando-a uma opção atraente para pacientes que buscam alternativas a tratamentos mais invasivos. Além disso, a EMT tem mostrado resultados promissores em estudos clínicos, com muitos pacientes relatando melhorias significativas em seus sintomas.
+                    Uma das grandes vantagens da EMT é que o procedimento é indolor e não requer anestesia, o que o torna uma alternativa atraente para pacientes que desejam evitar intervenções invasivas ou medicamentos de longo prazo. Além disso, a técnica permite sessões relativamente rápidas e seguras, facilitando sua aplicação clínica.
                 </p>
                 <br />
                 <p>
-                    A EMT é amplamente utilizada no tratamento de depressão resistente ao tratamento, transtornos de ansiedade, dor crônica, reabilitação pós-AVC e outras condições neurológicas. A técnica é segura e bem tolerada, com poucos efeitos colaterais relatados.
+                    Estudos clínicos têm demonstrado resultados promissores, especialmente em casos de depressão resistente ao tratamento, transtornos de ansiedade, dor crônica e reabilitação pós-AVC. Muitos pacientes relatam melhorias significativas nos sintomas, reforçando o potencial terapêutico da EMT como complemento ou alternativa aos tratamentos tradicionais.
                 </p>
                 <br />
                 <p>
-                    Em resumo, a EMT é uma técnica inovadora e promissora de neuromodulação não invasiva que oferece uma abordagem segura e eficaz para o tratamento de diversas condições neurológicas e psiquiátricas.
+                    Em resumo, a Estimulação Magnética Transcraniana se apresenta como uma opção inovadora, segura e eficaz para a neuromodulação. Sua aplicação crescente e bem-sucedida em diversas condições mostra que a técnica pode transformar o manejo de doenças neurológicas e psiquiátricas, oferecendo aos pacientes uma abordagem moderna e minimamente invasiva.
                 </p>
                 </div>
                 <div className="flex-1 lg:w-1/2 m-2 sm:m-4 flex justify-center">
@@ -80,21 +80,22 @@ export default function ApresentacaoProduto() {
             </h1>
             <div className="w-full h-full flex flex-col lg:flex-row justify-between p-6 sm:p-10 text-base sm:text-lg md:text-xl lg:text-2xl text-justify">
                 <div className="flex-1 lg:w-1/2 m-2 sm:m-4">
-                <p>
-                    A Estimulação Magnética Transcraniana (EMT) é uma técnica inovadora que pode oferecer diversos benefícios para a saúde mental e neurológica. Aqui estão algumas maneiras pelas quais a EMT pode ajudar:
-                </p>
-                <br />
-                <ol className="list-disc list-inside">
-                    <li className="mb-4">
-                    <strong>Eficaz e não invasivo:</strong> A Estimulação Magnética Transcraniana (EMT) é uma opção de tratamento não invasivo para várias condições de saúde mental, incluindo a depressão. Estudos clínicos demonstraram que a EMT pode reduzir os sintomas depressivos significativamente em pacientes que não respondem aos tratamentos tradicionais.
+                    <p>
+                    A Estimulação Magnética Transcraniana (EMT) é uma técnica inovadora que oferece diversos benefícios para a saúde mental e neurológica. Confira algumas das principais vantagens da EMT:
+                    </p>
+                    <br />
+                    <ol className="list-disc list-inside space-y-4">
+                    <li>
+                        <strong>Tratamento eficaz e não invasivo:</strong> A EMT é uma opção segura e não invasiva para diversas condições de saúde mental, incluindo depressão resistente a tratamentos tradicionais. Estudos clínicos mostram que ela pode reduzir significativamente os sintomas depressivos.
                     </li>
-                    <li className="mb-4">
-                    <strong>Melhora a função cognitiva:</strong> A EMT tem mostrado potencial para melhorar a função cognitiva em pacientes com transtornos neurológicos, como o AVC e a doença de Alzheimer. A estimulação magnética pode ajudar a restaurar a conectividade neural e melhorar a memória, atenção e outras funções cognitivas.
+                    <li>
+                        <strong>Melhora da função cognitiva:</strong> Em pacientes com transtornos neurológicos, como AVC ou Alzheimer, a EMT pode ajudar a restaurar a conectividade neural, promovendo melhorias em memória, atenção e outras funções cognitivas.
                     </li>
-                    <li className="mb-4">
-                    <strong>Tratamento personalizado:</strong> A EMT pode ser adaptada para atender às necessidades individuais de cada paciente. A frequência, intensidade e localização da estimulação podem ser ajustadas para otimizar os resultados do tratamento.
+                    <li>
+                        <strong>Tratamento personalizado:</strong> O protocolo da EMT pode ser adaptado às necessidades individuais do paciente, ajustando frequência, intensidade e local da estimulação para otimizar os resultados.
                     </li>
-                </ol>
+                    </ol>
+
                 <br />
                 <a
                     href={`https://wa.me/4498322222?text=${encodeURIComponent(texto)}`}
@@ -104,7 +105,7 @@ export default function ApresentacaoProduto() {
                 </a>
                 </div>
                 <div className="flex-1 lg:w-1/2 m-2 sm:m-4 flex justify-center">
-                <video src="/videoExemplo.mp4" controls className="w-full max-w-xl rounded-lg shadow-md"></video>
+                <video src="/videoplayback.mp4" controls className="w-full max-w-xl rounded-lg shadow-md"></video>
                 </div>
             </div>
             </section>

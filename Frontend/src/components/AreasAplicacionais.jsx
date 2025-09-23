@@ -4,15 +4,15 @@ import { TypingText } from './TypingText'
 export function AreasAplicacionais() {
     return(
         <div className='w-full'>
-            <section class="py-20 bg-teal-50">
-                <div class="max-w-6xl mx-auto px-6 text-center">
-                    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Áreas de Aplicação</h2>
+            <section className="py-20 bg-teal-50">
+                <div className="max-w-6xl mx-auto px-6 text-center">
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Áreas de Aplicação</h2>
 
-                    <p class="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12 text-justify">
+                    <p className="max-w-3xl mx-auto text-gray-600 text-lg sm:text-xl mb-12 text-justify">
                         O MAXIMUS EMT é utilizado em diversas especialidades médicas com resultados comprovados cientificamente
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-stretch">
                         <article className="group bg-blue-500 rounded-2xl shadow-lg transition-colors duration-300 p-10 flex flex-col items-center justify-center hover:bg-blue-50 hover:border-2 hover:border-blue-500">
                         <div className="mb-6 p-3 rounded-full bg-white/10 transition-colors duration-300 group-hover:bg-blue-50 group-hover:border-1 group-hover:border-blue-500">
                             <Brain size={48} strokeWidth={2} className="text-white transition-colors duration-300 group-hover:text-blue-500" />
