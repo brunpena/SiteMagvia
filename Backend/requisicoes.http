@@ -1,0 +1,10 @@
+@url = http://localhost:3000
+POST {{url}}/enviarEmail
+Content-Type: application/json
+
+{
+    "nome": "PedroSara",
+    "email": "PedroSara@gmail.com",
+    "telefone": "(44) 9 9707-9169",
+    "mensagem": "Olá, gostaria de saber mais sobre os serviços oferecidos pela Magvia."
+}

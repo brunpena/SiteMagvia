@@ -13,7 +13,6 @@ export default function Footer({
     return (
         <footer className="">
             <div className="bg-white">
-                {/* Topo do Footer */}
                 <div className="max-w-6xl mx-auto px-6 pt-6 pb-2 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-4">
                         <img src="/logoMagviaComTexto.png" alt="Magvia Produtos Médicos" className="h-8 w-20" />
@@ -45,7 +44,6 @@ export default function Footer({
                     </div>
                 </div>
 
-                {/* Linha divisória */}
                 <div className="border-t border-gray-100">
                     <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
                         <span>© {new Date().getFullYear()} Magvia Produtos Médicos. Todos os direitos reservados.</span>

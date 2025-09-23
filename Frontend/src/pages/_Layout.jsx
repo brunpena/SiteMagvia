@@ -13,7 +13,7 @@ export function Layout() {
     >
       <ScrollToTop behavior="smooth" />
       <Menu/>
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1 mt-5">
         <Outlet />
       </main>
       <Footer />

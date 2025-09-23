@@ -4,7 +4,7 @@ export function Pagina(props) {
       <main
         className={`
           flex flex-1 ${props.row ? "flex-row items-center justify-center" : "flex-col"}
-          pt-20  /* espaço para o menu fixo */
+          pt-20 
           bg-white
           text-base text-gray-900 font-sans
         `}

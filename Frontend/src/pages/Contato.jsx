@@ -54,10 +54,9 @@ export function Contato() {
       }
 
       const dados = await response.json();
-      alert("Mensagem enviada com sucesso!");
       setForm({ email: "", nome: "", telefone: "", mensagem: "" });
     } catch (error) {
-      console.error(error);
+      console.log(error);
       alert("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
     }
   }
@@ -72,6 +71,14 @@ export function Contato() {
       () => alert("Não foi possível copiar.")
     );
   }
+
+function checkNumber() {
+  let numero = form.telefone.trim();
+  const regex = /^\+?[1-9]\d{7,14}$/;
+  return regex.test(numero.replace(/\s+/g, "")); 
+}
+
+
 
   return (
     <Pagina>
@@ -123,7 +130,7 @@ export function Contato() {
                 onChange={handleChange}
                 placeholder="Ex. +55 (12) 9 1234-5678"
                 required
-                className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                className={`border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-400 ${checkNumber() ? "border-green-400 focus:ring-green-400" : "border-red-400 focus:ring-red-400"}`}
               />
             </div>
 

@@ -66,7 +66,7 @@ export function SobreNos() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-16">Localização</h1>
-        <div className="mt-4 w-full max-w-5xl">
+        <div className="mt-4 w-full max-w-5xl z-0">
           <Mapa />
         </div>
       </div>
@@ -74,9 +74,7 @@ export function SobreNos() {
   );
 }
 
-/* CardInfo: bg branco por padrão; muda visual no hover usando `group` */
 function CardInfo({ title, description, icon, color = "blue" }) {
-  // Mapeia classes específicas para cada cor — isso garante que o Tailwind/JIT gere todas as classes
   const styleMap = {
     blue: {
       ring: "group-hover:border-blue-500",
