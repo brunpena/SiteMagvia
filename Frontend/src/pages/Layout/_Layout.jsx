@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { Menu } from "../components/Menu";
-import Footer from "../components/Footer";
-import { ScrollToTop } from "../components/ScrollToTop";
+import { Menu } from "../../components/Header/Menu";
+import { Footer } from "../../components/Footer/Footer";
+import { ScrollToTop } from "../../components/Layout/ScrollToTop";
 
 export function Layout() {
   return (

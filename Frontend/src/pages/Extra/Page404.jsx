@@ -1,7 +1,7 @@
 // src/pages/NotFound.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { Pagina } from "../components/pagina";
+import { Pagina } from "../../components/Layout/Pagina";
 
 export function Page404() {
   return (

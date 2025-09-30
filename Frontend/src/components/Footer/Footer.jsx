@@ -3,7 +3,7 @@ import { Twitter, Instagram, Linkedin, Youtube, Github } from "lucide-react";
 import politica from "/politicaPrivacidade.pdf";
 import termos from "/termosUso.pdf";
 
-export default function Footer({
+export function Footer({
     links = [
         { label: "Sobre", href: "/sobreNos" },
         { label: "Produtos", href: "/produtos" },
@@ -13,7 +13,7 @@ export default function Footer({
     return (
         <footer className="">
             <div className="bg-white">
-                <div className="max-w-6xl mx-auto px-6 pt-6 pb-2 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="max-w-6xl mx-auto px-6 pt-6  flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-4">
                         <img src="/logoMagviaComTexto.png" alt="Magvia Produtos Médicos" className="h-8 w-20" />
                         <img src="/logoEducere.png" alt="Educere" className="h-8 w-20" />
@@ -44,18 +44,33 @@ export default function Footer({
                     </div>
                 </div>
 
-                <div className="border-t border-gray-100">
+                <div className="border-t border-gray-200">
                     <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
                         <span>© {new Date().getFullYear()} Magvia Produtos Médicos. Todos os direitos reservados.</span>
 
-                        <div className="flex items-center gap-1 mt-2 md:mt-0">
-                            <a href="https://github.com/PedrinnhoUtumi" className="text-gray-500 ">
-                                <Github size={16} className="text-gray-500 hover:text-purple-500" />
+                        <div className="flex flex-wrap items-center gap-2 mt-2 md:mt-0 text-sm text-gray-700">
+                            <span className="mr-1">Desenvolvido por</span>
+
+                            <a
+                                href="https://github.com/PedrinnhoUtumi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white text-gray-800 font-mono text-xs hover:bg-gray-100 transition"
+                            >
+                                <span className="text-purple-600">&lt;PedrinnhoUtumi/&gt;</span>
+                                <Github size={14} className="text-gray-500" />
                             </a>
-                            <span className="ml-1">Site feito por:</span>
-                            <a href="https://www.linkedin.com/in/pedro-felipe-onofre-utumi-4bb71a30b/" className="ml-1 text-gray-700 hover:text-purple-500 font-medium">
-                                Pedro Felipe Onofre Utumi
+                            
+                            <a
+                                href="https://github.com/brunpena"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white text-gray-800 font-mono text-xs hover:bg-gray-100 transition"
+                            >
+                                <span className="text-purple-600">&lt;brunpena/&gt;</span>
+                                <Github size={14} className="text-gray-500" />
                             </a>
+
                         </div>
 
                         <div className="flex gap-4 mt-3 md:mt-0">

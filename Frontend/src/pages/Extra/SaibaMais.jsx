@@ -1,4 +1,4 @@
-import { Pagina } from "../components/pagina"
+import { Pagina } from "../../components/Layout/Pagina"
 
 export function SaibaMais() {
   return (

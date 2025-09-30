@@ -1,7 +1,7 @@
-import { Pagina } from "../../../components/pagina";
-import productImg from "/BobSimples.png";
+import { Pagina } from "../../../components/Layout/Pagina";
+import productImg from "/magBee.png"; 
 
-export function SobreBobinaCircular() {
+export function SobreMagBee() {
   return (
     <Pagina>
       <div className="flex flex-col items-center justify-center w-full min-h-[80vh] bg-gray-50 py-16 px-6">
@@ -9,17 +9,17 @@ export function SobreBobinaCircular() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-[#3B82F6]">
-                Sobre a Bobina Circular
+              <h1 className="text-4xl sm:text-5xl font-extrabold text-[#14B8A6]">
+                Sobre a MagBee
               </h1>
 
               <p className="text-lg text-gray-700 leading-relaxed mt-4 text-justify">
-                A TDCS é um dos principais produtos da empresa brasileira Magvia Produtos Médicos Ltda,
+                A MagBee é um dos principais produtos da empresa brasileira Magvia Produtos Médicos Ltda,
                 dedicada ao desenvolvimento de tecnologias inovadoras em neuromodulação.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mt-4 text-justify">
-                Desenvolvido com tecnologia nacional e estrangeira, a TDCS é um Estimulador Transcraniano
+                Desenvolvido com tecnologia nacional e estrangeira, a MagBee é um Estimulador Magnético
                 Transcraniano (EMT) de alta performance, projetado para atender diversas áreas médicas,
                 incluindo neurologia, psiquiatria, reabilitação e outras especialidades.
               </p>
@@ -35,10 +35,10 @@ export function SobreBobinaCircular() {
             </div>
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-[#3B82F6] rounded-lg p-6 space-y-4">
-            <h2 className="text-2xl font-bold text-[#3B82F6]">Diferenciais da Bobina Circular</h2>
+          <div className="bg-teal-50 border-l-4 border-[#14B8A6] rounded-lg p-6 space-y-4">
+            <h2 className="text-2xl font-bold text-[#14B8A6]">Diferenciais da MagBee</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><strong>Alta Performance:</strong> A TDCS oferece uma performance superior, garantindo eficácia e segurança em cada aplicação.</li>
+              <li><strong>Alta Performance:</strong> A Maximus oferece uma performance superior, garantindo eficácia e segurança em cada aplicação.</li>
               <li><strong>Precisão:</strong> Com tecnologia avançada, permite a estimulação precisa de áreas específicas do cérebro, otimizando os resultados terapêuticos.</li>
               <li><strong>Versatilidade:</strong> Adequada para uma ampla gama de protocolos clínicos, atendendo às necessidades de diferentes especialidades médicas.</li>
               <li><strong>Design Ergonômico:</strong> Desenvolvida para proporcionar conforto ao paciente e facilidade de uso para o profissional de saúde.</li>
@@ -50,7 +50,7 @@ export function SobreBobinaCircular() {
             <p className="text-gray-700 text-lg mb-4">Para mais informações:</p>
             <a
               href="/contato"
-              className="inline-block bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+              className="inline-block bg-[#14B8A6] hover:bg-[#0E9B8A] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
             >
               Falar com a gente
             </a>

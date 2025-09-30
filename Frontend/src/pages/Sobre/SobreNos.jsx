@@ -1,9 +1,8 @@
 import React from "react";
 import { FaLightbulb, FaEye, FaHeart } from "react-icons/fa";
-import { TypingText } from "../components/TypingText";
-import { Mapa } from "../components/mapa";
-import { Brain } from "lucide-react";
-import { Pagina } from "../components/pagina";
+import { TypingText } from "../../components/Typing/TypingText";
+import { Mapa } from "../../components/Mapa/Mapa";
+import { Pagina } from "../../components/Layout/Pagina";
 
 export function SobreNos() {
   return (

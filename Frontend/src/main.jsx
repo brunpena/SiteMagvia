@@ -1,22 +1,22 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { PaginaPrincipal } from './pages/PaginaPrincipal';
+import { PaginaPrincipal } from './pages/Home/PaginaPrincipal';
 import './index.css'
 import { createRoutesFromElements, RouterProvider, Route, createBrowserRouter } from 'react-router-dom';
-import { Layout } from './pages/_Layout';
-import { Informacoes } from './pages/Informacoes';
-import { SobreNos } from './pages/SobreNos';
-import { Contato } from './pages/Contato';
-import { Produtos } from './pages/Produtos';
-import { Acessorios } from './pages/Acessorios';
-import { SaibaMais } from './pages/SaibaMais';
-import { SobreMaximus } from './pages/SobreProdutos/SobreMaximus';
-import { SobreMaximusClinic } from './pages/SobreProdutos/SobreMaximusClinic';
-import { SobreTDCS } from './pages/SobreProdutos/SobreTDCS';
-import { SobreBobinaCircular } from './pages/SobreProdutos/SobreAcessorios/SobreBobinaCircular';
-import { SobreBobina8 } from './pages/SobreProdutos/SobreAcessorios/SobreBobina8';
-import { SobreMagBee } from './pages/SobreProdutos/SobreAcessorios/SobreMagBee';
-import { Page404 } from './pages/page404';
+import { Layout } from './pages/Layout/_Layout';
+import { Informacoes } from './pages/Sobre/Informacoes';
+import { SobreNos } from './pages/Sobre/SobreNos';
+import { Contato } from './pages/Contato/Contato';
+import { Produtos } from './pages/Produtos/Produtos';
+import { Acessorios } from './pages/Produtos/Acessorios';
+import { SaibaMais } from './pages/Extra/SaibaMais';
+import { SobreMaximus } from './pages/Produtos/SobreProdutos/SobreMaximus';
+import { SobreMaximusClinic } from './pages/Produtos/SobreProdutos/SobreMaximusClinic';
+import { SobreTDCS } from './pages/Produtos/SobreProdutos/SobreTDCS';
+import { SobreBobinaCircular } from './pages/Produtos/SobreAcessorios/SobreBobinaCircular';
+import { SobreBobina8 } from './pages/Produtos/SobreAcessorios/SobreBobina8';
+import { SobreMagBee } from './pages/Produtos/SobreAcessorios/SobreMagBee';
+import { Page404 } from './pages/Extra/page404';
 
 
 const rotas = createBrowserRouter(

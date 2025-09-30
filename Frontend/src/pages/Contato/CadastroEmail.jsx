@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Mail } from "lucide-react";
 
-export default function cadastroEmail({
+export function cadastroEmail({
     title = "Fique por dentro das novidades!",
     subtitle = "Cadastre-se e receba informações sobre lançamentos e atualizações do MAXIMUS EMT",
     placeholder = "Seu melhor e-mail",

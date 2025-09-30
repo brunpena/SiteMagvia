@@ -1,4 +1,4 @@
-import { Pagina } from "../../components/pagina";
+import { Pagina } from "../../../components/Layout/Pagina";
 import productImg from "/max.png"; 
 import acessorio1 from "/BobSimples.png"
 import acessorio2 from "/BobDupla.png"

@@ -1,5 +1,5 @@
 import { FaEnvelope, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaClock, FaCopy, FaFlag } from "react-icons/fa";
-import { Pagina } from "../components/pagina";
+import { Pagina } from "../../components/Layout/Pagina";
 import { useState } from "react";
 import { BR, US, ES, FR } from "country-flag-icons/react/3x2";
 
