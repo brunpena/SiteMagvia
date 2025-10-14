@@ -10,25 +10,23 @@ export function SobreMagBee() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-[#14B8A6]">
-                Sobre a MagBee
+                Conheça a MagBee
               </h1>
 
               <p className="text-lg text-gray-700 leading-relaxed mt-4 text-justify">
-                A MagBee é um dos principais produtos da empresa brasileira Magvia Produtos Médicos Ltda,
-                dedicada ao desenvolvimento de tecnologias inovadoras em neuromodulação.
+                A MagBee traz a potência da Estimulação Magnética Transcraniana (EMT) em um formato compacto e inovador. 
+                Com um design único em formato de banco, ela alia alto desempenho com praticidade, tornando-a um acessório indispensável para clínicas de ponta.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mt-4 text-justify">
-                Desenvolvido com tecnologia nacional e estrangeira, a MagBee é um Estimulador Magnético
-                Transcraniano (EMT) de alta performance, projetado para atender diversas áreas médicas,
-                incluindo neurologia, psiquiatria, reabilitação e outras especialidades.
+                Desenvolvida com tecnologia nacional e internacional, a MagBee oferece performance de alto nível em um design ergonômico, ideal para otimizar o espaço e a eficiência no ambiente clínico.
               </p>
             </div>
 
             <div className="flex items-center justify-center">
               <img
                 src={productImg}
-                alt="Maximus - Estimulador Magnético Transcraniano"
+                alt="MagBee - Estimulador Magnético Transcraniano"
                 className="w-full max-w-md rounded-2xl shadow-md object-contain"
                 loading="lazy"
               />
@@ -38,21 +36,21 @@ export function SobreMagBee() {
           <div className="bg-teal-50 border-l-4 border-[#14B8A6] rounded-lg p-6 space-y-4">
             <h2 className="text-2xl font-bold text-[#14B8A6]">Diferenciais da MagBee</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><strong>Alta Performance:</strong> A Maximus oferece uma performance superior, garantindo eficácia e segurança em cada aplicação.</li>
-              <li><strong>Precisão:</strong> Com tecnologia avançada, permite a estimulação precisa de áreas específicas do cérebro, otimizando os resultados terapêuticos.</li>
-              <li><strong>Versatilidade:</strong> Adequada para uma ampla gama de protocolos clínicos, atendendo às necessidades de diferentes especialidades médicas.</li>
-              <li><strong>Design Ergonômico:</strong> Desenvolvida para proporcionar conforto ao paciente e facilidade de uso para o profissional de saúde.</li>
-              <li><strong>Suporte Técnico e Treinamento:</strong> A Magvia oferece suporte técnico especializado e treinamento para garantir o uso eficaz do equipamento.</li>
+              <li><strong>Compacta e Funcional:</strong> A MagBee combina potência com um design eficiente, ocupando pouco espaço e oferecendo alta performance.</li>
+              <li><strong>Design Inovador:</strong> O formato de banco permite fácil adaptação e uso em ambientes clínicos, garantindo conforto ao paciente e praticidade para o profissional.</li>
+              <li><strong>Alta Performance:</strong> Oferece a mesma eficácia dos estimuladores tradicionais, com uma abordagem moderna e acessível.</li>
+              <li><strong>Versatilidade:</strong> Ideal para uma variedade de tratamentos e protocolos clínicos, atendendo às necessidades de múltiplas especialidades médicas.</li>
+              <li><strong>Suporte e Treinamento:</strong> A Magvia oferece total suporte técnico e treinamento especializado para garantir o uso eficiente do equipamento.</li>
             </ul>
           </div>
 
           <div className="text-center">
-            <p className="text-gray-700 text-lg mb-4">Para mais informações:</p>
+            <p className="text-gray-700 text-lg mb-4">Quer saber mais?</p>
             <a
               href="/contato"
               className="inline-block bg-[#14B8A6] hover:bg-[#0E9B8A] text-white font-semibold px-6 py-3 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
             >
-              Falar com a gente
+              Fale conosco
             </a>
           </div>
         </div>
